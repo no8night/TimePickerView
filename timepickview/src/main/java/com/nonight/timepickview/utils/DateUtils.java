@@ -1,7 +1,8 @@
-package com.nonight.timepickerview.utils;
+package com.nonight.timepickview.utils;
 
-import com.nonight.timepickerview.entity.DateStyle;
-import com.nonight.timepickerview.entity.Week;
+
+import com.nonight.timepickview.entity.DateStyle;
+import com.nonight.timepickview.entity.Week;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

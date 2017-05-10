@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.nonight.timepickerview.R;
-import com.nonight.timepickerview.entity.DateStyle;
-import com.nonight.timepickerview.utils.DateUtils;
-import com.nonight.timepickerview.view.TimePickerView;
+import com.nonight.timepickview.entity.DateStyle;
+import com.nonight.timepickview.utils.DateUtils;
+import com.nonight.timepickview.view.TimePickerView;
 
 import java.util.Date;
 

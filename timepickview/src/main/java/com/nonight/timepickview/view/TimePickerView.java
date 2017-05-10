@@ -1,4 +1,4 @@
-package com.nonight.timepickerview.view;
+package com.nonight.timepickview.view;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-import com.nonight.timepickerview.utils.DateUtils;
 import com.nonight.timepickerview.R;
+import com.nonight.timepickerview.utils.DateUtils;
 
 import java.util.Date;
 

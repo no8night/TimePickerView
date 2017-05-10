@@ -1,4 +1,4 @@
-package com.nonight.timepickerview.entity;
+package com.nonight.timepickview.entity;
 
 /**
  * Created by 祈愿星痕 on 2017/5/10.
