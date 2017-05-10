@@ -11,9 +11,17 @@
     tools:context="com.nonight.timepickerview.activity.MainActivity">
 
     <com.nonight.timepickerview.view.TimePickerView
+        android:id="@+id/timep"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
     </com.nonight.timepickerview.view.TimePickerView>
+
+    <TextView
+android:layout_below="@+id/timep"
+        android:text="12313123123"
+        android:id="@+id/show_tv"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

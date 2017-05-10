@@ -1,7 +1,9 @@
 package com.nonight.timepickerview.utils;
 
+import com.nonight.timepickerview.entity.DateStyle;
 import com.nonight.timepickerview.entity.Week;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -235,5 +237,85 @@ public class DateUtils {
         calendar.setTime(date);
         calendar.set(Calendar.DAY_OF_MONTH,value);
         date.setTime(calendar.getTimeInMillis());
+    }
+
+    //设置小时
+    public static  Date setHour(int hour, Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.HOUR_OF_DAY, hour);
+        return calendar.getTime();
+    }
+
+    //设置分钟
+    public static Date setMinute(int minute, Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.MINUTE, minute);
+        return calendar.getTime();
+    }
+
+    /**
+     * 获取SimpleDateFormat
+     * @param parttern 日期格式
+     * @return SimpleDateFormat对象
+     * @throws RuntimeException 异常：非法日期格式
+     */
+    private static SimpleDateFormat getDateFormat(String parttern) throws RuntimeException {
+        return new SimpleDateFormat(parttern);
+    }
+
+
+
+
+    /**
+     * 获取日期。默认yyyy-MM-dd格式。失败返回null。
+     * @param date 日期
+     * @return 日期
+     */
+    public static String getDate(Date date) {
+        return DateToString(date, DateStyle.YYYY_MM_DD);
+    }
+
+
+
+    /**
+     * 获取日期的时间。默认HH:mm:ss格式。失败返回null。
+     * @param date 日期
+     * @return 时间
+     */
+    public static String getTime(Date date) {
+        return DateToString(date, DateStyle.HH_MM_SS);
+    }
+
+    /**
+     * 将日期转化为日期字符串。失败返回null。
+     * @param date 日期
+     * @param parttern 日期格式
+     * @return 日期字符串
+     */
+    public static String DateToString(Date date, String parttern) {
+        String dateString = null;
+        if (date != null) {
+            try {
+                dateString = getDateFormat(parttern).format(date);
+            } catch (Exception e) {
+            }
+        }
+        return dateString;
+    }
+
+    /**
+     * 将日期转化为日期字符串。失败返回null。
+     * @param date 日期
+     * @param dateStyle 日期风格
+     * @return 日期字符串
+     */
+    public static String DateToString(Date date, DateStyle dateStyle) {
+        String dateString = null;
+        if (dateStyle != null) {
+            dateString = DateToString(date, dateStyle.getValue());
+        }
+        return dateString;
     }
 }
