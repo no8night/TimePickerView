@@ -13,7 +13,7 @@ allprojects {
 Step 2 :
 
 dependencies {
-		compile 'com.github.User:Repo:Tag'
+		compile 'com.github.no8night:TimePickerView:1.1'
 	}
   
  
